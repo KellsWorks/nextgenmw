@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{config("app.name")}}</title>
+
+  <link href="../img/icon.png" rel="icon">
+  <link href="../img/icon.png" rel="apple-touch-icon">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
