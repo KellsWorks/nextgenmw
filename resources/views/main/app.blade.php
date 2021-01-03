@@ -66,10 +66,12 @@
     <div class="container bg-dark">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
-          <h3 class="text-white">Software & hardware technology company</h3>
+          @foreach ($homeInfo as $info)
+          <h3 class="text-white">{{ $info->title}}</h3>
           <p class="text-white mt-5 ">
-            NEXTGENERATIONS, "Centuries beyond!". We offer services i.e. android app development, iOS app development, backend development, Web design and website development and many more...
-        </p>
+            {{ $info->content}}
+            </p>
+          @endforeach
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\HomeBanner;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 //User routes
 
-Route::get('/', function () {
-    return view('main.app');
-});
 
+Route::get('/', function() {
+    
+    $homeInfo = HomeBanner::all();
+
+    return view('main.app', compact($homeInfo, 'homeInfo'));
+});
 
 
 
