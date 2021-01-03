@@ -16,18 +16,22 @@ use Illuminate\Support\Facades\Route;
 //User routes
 
 Route::get('/', function () {
-    return view('main.app');
+    return view('home');
 });
+
+
+Route::get('/v1/admin/login', function() {
+    return view('auth.login');
+});
+
+
+Auth::routes();
 
 
 //Adminstrator routes
 
 
-Route::get('/v1/admin', function() {
-    return view('admin.dashboard');
+Route::get('/v1/admin', function($id) {
+    return view('admin.app');
 });
-
-Auth::routes();
-
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
