@@ -13,7 +13,13 @@ class LatestWorks extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('all_works', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('url');
+            $table->string('details')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class LatestWorks extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('all_works');
     }
 }

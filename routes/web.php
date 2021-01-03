@@ -45,3 +45,9 @@ Route::get('/v1/admin/register', function() {
 Auth::routes();
 
 
+Route::get('/v1/admin/latest-works', function() {
+    return view('admin.works');
+});
+
+
+

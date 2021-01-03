@@ -10,23 +10,23 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <link rel="stylesheet" href="../admin/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../admin/plugins/fontawesome-free/css/all.min.css">
 
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
-  <link rel="stylesheet" href="../admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../../admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 
-  <link rel="stylesheet" href="../admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="../../admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
-  <link rel="stylesheet" href="../admin/plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="../../admin/plugins/jqvmap/jqvmap.min.css">
 
-  <link rel="stylesheet" href="../admin/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../admin/dist/css/adminlte.min.css">
 
-  <link rel="stylesheet" href="../admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../../admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
  
-  <link rel="stylesheet" href="../admin/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../../admin/plugins/daterangepicker/daterangepicker.css">
 
-  <link rel="stylesheet" href="../admin/plugins/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="../../admin/plugins/summernote/summernote-bs4.css">
   
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -160,7 +160,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="../img/icon.png" alt="Nextgenerations Malawi Logo" class="brand-image">
+      <img src="../../img/icon.png" alt="Nextgenerations Malawi Logo" class="brand-image">
       <span class="brand-text font-weight-light">Adminstrator</span>
     </a>
 
@@ -169,7 +169,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../img/staff/kelvin_chidothi.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../img/staff/kelvin_chidothi.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Kelvin Chidothi</a>
@@ -306,40 +306,40 @@
 <!-- ./wrapper -->
 
 
-<script src="../admin/plugins/jquery/jquery.min.js"></script>
+<script src="../../admin/plugins/jquery/jquery.min.js"></script>
 
-<script src="../admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="../../admin/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 
-<script src="../admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="../admin/plugins/chart.js/Chart.min.js"></script>
+<script src="../../admin/plugins/chart.js/Chart.min.js"></script>
 
-<script src="../admin/plugins/sparklines/sparkline.js"></script>
+<script src="../../admin/plugins/sparklines/sparkline.js"></script>
 
-<script src="../admin/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../../admin/plugins/jqvmap/jquery.vmap.min.js"></script>
 
-<script src="../admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="../../admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 
-<script src="../admin/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="../../admin/plugins/jquery-knob/jquery.knob.min.js"></script>
 
-<script src="../admin/plugins/moment/moment.min.js"></script>
+<script src="../../admin/plugins/moment/moment.min.js"></script>
 
-<script src="../admin/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../../admin/plugins/daterangepicker/daterangepicker.js"></script>
 
-<script src="../admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="../../admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
-<script src="../admin/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="../../admin/plugins/summernote/summernote-bs4.min.js"></script>
 
-<script src="../admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
-<script src="../admin/dist/js/adminlte.js"></script>
+<script src="../../admin/dist/js/adminlte.js"></script>
 
-<script src="../admin/dist/js/pages/dashboard.js"></script>
+<script src="../../admin/dist/js/pages/dashboard.js"></script>
 
-<script src="../admin/dist/js/demo.js"></script>
+<script src="../../admin/dist/js/demo.js"></script>
 </body>
 </html>
