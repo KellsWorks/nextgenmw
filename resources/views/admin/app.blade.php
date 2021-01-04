@@ -222,33 +222,13 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="/v1/admin/pages" class="nav-link">
                 <i class="nav-icon fas fa-file-alt"></i>
               <p>
-                Other pages
-                
+                All pages
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Services</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Offers</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#l" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Resources</p>
-                </a>
-              </li>
-            </ul>
+            
           </li>
         
           <li class="nav-header">SOCIAL</li>

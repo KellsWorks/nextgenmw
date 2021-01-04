@@ -5,6 +5,7 @@ use App\Models\HomeBanner;
 use App\Models\Newsletters;
 use Illuminate\Http\Request;
 use App\Models\PageVisitors;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,13 +89,18 @@ Route::get('/v1/admin/cpanel', function() {
 });
 
 Route::get('/v1/admin/profile', function() {
-    return view('admin.profile');
+    $users = User::all();
+
+    return view('admin.profile', compact('users'));
 });
 
 Route::get('/v1/admin/pages', function() {
     return view('admin.pages');
 });
 
+Route::get('/v1/admin/home-page', function() {
+    return view('admin.home');
+});
 
 Route::get('/v1/admin/visitors', function() {
 

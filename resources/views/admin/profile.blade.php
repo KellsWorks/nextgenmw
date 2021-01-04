@@ -13,7 +13,7 @@
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="/v1/admin">Home</a></li>
             <li class="breadcrumb-item active">User Profile</li>
           </ol>
         </div>
@@ -36,7 +36,9 @@
                      alt="User profile picture">
               </div>
 
-              <h3 class="profile-username text-center">{{Auth::user()->name}}</h3>
+              @foreach ($users as $user)
+              <h3 class="profile-username text-center">{{$user->name}}</h3>
+              @endforeach
 
               <p class="text-muted text-center">Adminstrator</p>
 
