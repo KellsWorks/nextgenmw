@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{config("app.name")}}</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
   <link href="../img/icon.png" rel="icon">
   <link href="../img/icon.png" rel="apple-touch-icon">
@@ -31,6 +33,15 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
+
+  @if (session('status'))
+  <div class="alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h5><i class="icon fas fa-check"></i> Alert!</h5>
+    Success alert preview. This alert is dismissable.
+  </div>
+  @endif
+
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -41,7 +52,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -148,8 +159,12 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href{{ route('logout') }}" role="button" onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
+          <i class="fas fa-sign-out-alt"></i>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+            {{ csrf_field() }}
+        </form>
         </a>
       </li>
     </ul>
@@ -261,7 +276,7 @@
           <li class="nav-item">
             <a href="https://adminlte.io/docs/3.0" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
-              <p>Documents</p>
+              <p>Cpanel</p>
             </a>
           </li>  
 
@@ -297,13 +312,6 @@
     All rights reserved.
   </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 
 
 <script src="../../admin/plugins/jquery/jquery.min.js"></script>

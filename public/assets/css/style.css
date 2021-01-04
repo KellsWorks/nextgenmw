@@ -101,7 +101,7 @@ a:hover {
 }
 
 #main {
-  margin-top: 72px;
+  
 }
 
 /*--------------------------------------------------------------
@@ -351,13 +351,6 @@ a:hover {
   margin: 72px 0 -72px 0;
 }
 
-#hero h1 {
-  margin: 0 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #4e4039;
-}
 
 #hero h2 {
   color: #a08f86;
@@ -380,7 +373,7 @@ a:hover {
 }
 
 #hero .btn-get-started:hover {
-  background: #0698fa;
+  background: #57819c;
 }
 
 #hero .animated {
@@ -1183,6 +1176,8 @@ section {
   padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
+  outline-style: none;
+  outline: none;
   border-radius: 4px;
 }
 

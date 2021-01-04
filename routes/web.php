@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\HomeBanner;
+use App\Models\Newsletters;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,8 +23,29 @@ Route::get('/', function() {
     
     $homeInfo = HomeBanner::all();
 
-    return view('main.app', compact($homeInfo, 'homeInfo'));
+    return view('main.home', compact($homeInfo, 'homeInfo'));
 });
+
+Route::get('/work', function() {
+    
+
+    return view('main.work');
+});
+
+
+Route::post('/send-message', ['App\Http\Controllers\MainController@contact'])->name('send-message');
+
+Route::post('/subscribe-newsletter', function(Request $request) {
+    $add = new Newsletters();
+
+        $add->message = "Please add me to your newsletter";
+        $add->email = $request->email;
+
+        $add->save();
+
+        return redirect('/')->with('status', 'success');
+});
+
 
 
 
@@ -49,5 +72,8 @@ Route::get('/v1/admin/latest-works', function() {
     return view('admin.works');
 });
 
+Route::get('/v1/admin/cpanel', function() {
+    return view('admin.cpanel');
+});
 
 
