@@ -87,8 +87,20 @@ Route::get('/v1/admin/cpanel', function() {
     return view('admin.cpanel');
 });
 
+Route::get('/v1/admin/profile', function() {
+    return view('admin.profile');
+});
+
+Route::get('/v1/admin/pages', function() {
+    return view('admin.pages');
+});
+
+
 Route::get('/v1/admin/visitors', function() {
-    return view('admin.page-visitors');
+
+    $visitors = PageVisitors::all();
+
+    return view('admin.page-visitors', compact('visitors'));
 });
 
 

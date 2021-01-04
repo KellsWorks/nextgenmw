@@ -187,7 +187,7 @@
           <img src="../../img/staff/kelvin_chidothi.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Kelvin Chidothi</a>
+          <a href="/v1/admin/profile" class="d-block">Kelvin Chidothi</a>
         </div>
       </div>
 
@@ -285,31 +285,12 @@
     </div>
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
 
     @yield('content')
    
   <footer class="main-footer">
     <strong>Copyright &copy; {{ now()->year }} <a href="http://nextgenmw.com">Nextgenerations Malawi</a>.</strong>
-    All rights reserved.
+    Version 1.0.0
   </footer>
 
 
@@ -317,6 +298,8 @@
 <script src="../../admin/plugins/jquery/jquery.min.js"></script>
 
 <script src="../../admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+
 
 <script>
   $.widget.bridge('uibutton', $.ui.button)
