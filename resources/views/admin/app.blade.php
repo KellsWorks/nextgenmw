@@ -52,24 +52,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="/v1/admin/home-page" class="nav-link">Home</a>
       </li>
     </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -176,7 +163,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="../../img/icon.png" alt="Nextgenerations Malawi Logo" class="brand-image">
-      <span class="brand-text font-weight-light">Adminstrator</span>
+      <span class="brand-text font-weight-light"> <h3>ADMIN</h3> </span>
     </a>
 
     <!-- Sidebar -->
@@ -206,7 +193,7 @@
          
           <li class="nav-header">WEBSITE</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/v1/admin/home-page" class="nav-link">
               <i class="nav-icon fas fa-laptop-house"></i>
               <p>
                 Home

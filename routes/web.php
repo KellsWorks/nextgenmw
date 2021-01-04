@@ -6,6 +6,7 @@ use App\Models\Newsletters;
 use Illuminate\Http\Request;
 use App\Models\PageVisitors;
 use App\Models\User;
+use App\Models\HomeContent;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,7 +100,10 @@ Route::get('/v1/admin/pages', function() {
 });
 
 Route::get('/v1/admin/home-page', function() {
-    return view('admin.home');
+
+    $contents = HomeContent::all();
+
+    return view('admin.home', compact('contents'));
 });
 
 Route::get('/v1/admin/visitors', function() {
