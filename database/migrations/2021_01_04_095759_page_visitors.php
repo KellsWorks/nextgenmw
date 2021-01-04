@@ -13,7 +13,11 @@ class PageVisitors extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('page_visitors', function (Blueprint $table) {
+            $table->id();
+            $table->string('ip');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class PageVisitors extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('page_visitors');
     }
 }

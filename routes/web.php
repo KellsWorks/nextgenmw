@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\HomeBanner;
 use App\Models\Newsletters;
 use Illuminate\Http\Request;
+use App\Models\PageVisitors;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,18 @@ use Illuminate\Http\Request;
 //User routes
 
 
-Route::get('/', function() {
+Route::get('/', function(Request $request) {
     
     $homeInfo = HomeBanner::all();
+    $ip =  $request->ip();
 
-    return view('main.home', compact($homeInfo, 'homeInfo'));
+    $visitor = new PageVisitors();
+    $visitor->ip = $ip;
+
+    $visitor->save();
+    
+
+    return view('main.home', compact($homeInfo, 'homeInfo'), compact('ip'));
 });
 
 Route::get('/work', function() {
@@ -53,7 +61,10 @@ Route::post('/subscribe-newsletter', function(Request $request) {
 
 
 Route::get('/v1/admin', function() {
-    return view('admin.dashboard');
+
+    $visitors = PageVisitors::all()->count();
+
+    return view('admin.dashboard', compact('visitors'));
 });
 
 Route::get('/v1/admin/login', function() {
@@ -74,6 +85,10 @@ Route::get('/v1/admin/latest-works', function() {
 
 Route::get('/v1/admin/cpanel', function() {
     return view('admin.cpanel');
+});
+
+Route::get('/v1/admin/visitors', function() {
+    return view('admin.page-visitors');
 });
 
 
