@@ -24,11 +24,10 @@
     </div>
   </div>
 
-</section><!-- End Hero -->
+</section>
 
 <main id="main" class="bg-dark">
 
-  <!-- ======= About Section ======= -->
   <section id="about" class="about">
     <div class="container">
       <div class="row justify-content-between">
