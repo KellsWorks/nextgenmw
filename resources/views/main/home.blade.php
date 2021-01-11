@@ -1,11 +1,10 @@
 @extends('main.app')
 
-
 @section('content')
 
-<!-- ======= Hero Section ======= -->
+{{--  Main page  --}}
 
-<section id="hero" class="d-flex align-items-center bg-dark">
+<section id="starter" class="d-flex align-items-center bg-dark">
 
   <div class="container bg-dark">
     <div class="row">
@@ -16,14 +15,13 @@
           {{ $info->content}}
           </p>
         @endforeach
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="#about" class="btn btn-outline-primary scrollto">Get Started</a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 hero-img">
         <img src="assets/img/hero-img.svg" class="img-fluid animated" alt="">
       </div>
     </div>
   </div>
-
 </section>
 
 <main id="main" class="bg-dark">
@@ -53,14 +51,11 @@
           </div>
         </div>
       </div>
-
     </div>
-  </section><!-- End About Section -->
+  </section>
 
-  <!-- ======= Services Section ======= -->
   <section id="services" class="services bg-dark">
     <div class="container">
-
       <div class="section-title" data-aos="fade-up">
           <h1 class="text-white text-center m-5">
               Our Services
@@ -71,145 +66,74 @@
       </div>
 
       <div class="row">
+        @foreach ($services as $service)
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
           <div class="icon-box">
-            <div class="icon"><i class="icofont-smart-phone"></i></div>
-            <h4 class="title"><a href="">Mobile apps</a></h4>
-            <p class="description">Our primary goal in mobile app development is the use of advanced skills in order to bring the most exciting features for your mobile application. We build commerce, agricultural, science, health, educations etc apps.
+            <div class="icon"><i class="{{$service->icon}}"></i></div>
+            <h4 class="title"><a href="">{{$service->title}}</a></h4>
+            <p class="description">{{$service->content}}
           </p>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <div class="icon"><i class="icofont-dashboard-web"></i></div>
-            <h4 class="title"><a href="">Backend development</a></h4>
-            <p class="description">For cooporate developments, we build backends for websites and mobile apps (Android and iOS) with easy intergration with your frontends. Our API's are secured and limited to your choice.
-          </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="icofont-web"></i></div>
-            <h4 class="title"><a href="">Web development</a></h4>
-            <p class="description"> We focus on effective web solutions with the highest qualities and amazing features. We design and build websites, web apps, web commerce intergration, web backends and many more...
-                  
-          </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-          <div class="icon-box">
-            <div class="icon"><i class="icofont-library"></i></div>
-            <h4 class="title"><a href="">IT Support</a></h4>
-            <p class="description"> We provide support to IT departments in organizations in system maintenance and technologies usage. We also offer network solutions and favourable CMS for large organizations   
-          </p>
-          </div>
-        </div>
-
+        @endforeach
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section>
 
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title" data-aos="fade-up">
-        <h1 class="text-white">Our latest works</h1>
-        <p class="text-white text-center mt-1">
-          To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage But who has any right
-      </p>
+  <section id="offers">
+    <div id="pricing" class="section wb">
+      <div class="container">
+          <div class="section-title text-center">
+              <h1 class="text-white" data-aos="fade-up">Offers</h1>
+              <p class="text-white" data-aos="fade-up">Get 50% offer when working projects with us.</p>
+          </div>
+  
+          <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-md-12">
+          <div class="pricing pricing-palden">
+          
+          @foreach ($offers as $offer)
+          <div class="{{$offer->class}}">
+            <div class="pricing-deco">
+            <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+              <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729&#x000A;	c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
+              <path class="deco-layer deco-layer--2" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729&#x000A;	c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z" fill="#FFFFFF" opacity="0.6"></path>
+              <path class="deco-layer deco-layer--3" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716&#x000A;	H42.401L43.415,98.342z" fill="#FFFFFF" opacity="0.7"></path>
+              <path class="deco-layer deco-layer--4" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428&#x000A;	c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z" fill="#FFFFFF"></path>
+            </svg>
+            <div class="pricing-price"><span class="pricing-currency">MK</span>{{$offer->price}}
+              <span class="pricing-period">, 000</span>
+            </div>
+            <h3 class="pricing-title">{{$offer->title}}</h3>
+            </div>
+            <ul class="pricing-feature-list">
+            <li class="pricing-feature">{{$offer->content_1}}</li>
+            <li class="pricing-feature">{{$offer->content_2}}</li>
+            <li class="pricing-feature">{{$offer->content_3}}</li>
+            </ul>
+            <a href="/offers/{{$offer->id}}"><button class="bttn-new-a">Get started</button></a>
+          </div> 
+          @endforeach
+          
+        </div>
       </div>
-
-      <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-12">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Mobile apps</li>
-            <li data-filter=".filter-card">Web development</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="../img/works/mobile/dzikolanga.png" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="../img/works/mobile/dzikolanga.png" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-plus-circle"></i></a>
-              <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4>Dziko Langa app</h4>
-              <p>Onlin election results viewer</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="../img/works/mobile/Doctors.png" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="../img/works/mobile/Doctors.png"  data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-plus-circle"></i></a>
-              <a href="/work" title="More Details"><i class="icofont-link"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4>Doctors Appointments</h4>
-              <p>Private: Owned by Nextgenerations Malawi</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="../img/works/mobile/hec.jpg" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="../img/works/mobile/hec.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-plus-circle"></i></a>
-              <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4>HEC</h4>
-              <p>Higher education resources in Malawi</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="../img/works/web/qr.png" class="img-fluid" alt="">
-            <div class="portfolio-links">
-              <a href="../img/works/web/qr.png"  data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-plus-circle"></i></a>
-              <a href="portfolio-details.html" title="More Details"><i class="icofont-link"></i></a>
-            </div>
-            <div class="portfolio-info">
-              <h4>QR Ticketing System</h4>
-              <p>PRIVATE: OWNED BY NEXTGENERATIONS</p>
-            </div>
-          </div>
-        </div>
-
-      
-
-      </div>
-
     </div>
-  </section><!-- End Portfolio Section -->
+   </div>
+  </div>
 
-  <!-- ======= F.A.Q Section ======= -->
+  
+
+  
   <section id="faq" class="faq">
     <div class="container">
-
       <div class="section-title" data-aos="fade-up">
         <h1 class="text-white">F.A.Q</h1>
         <p class="text-white">Frequently Asked Questions</p>
       </div>
 
       <ul class="faq-list">
-
         <li data-aos="fade-up" data-aos-delay="100">
           <a data-toggle="collapse" class="" href="#faq1">Adminstrative roles</i></a>
           <div id="faq1" class="collapse show" data-parent=".faq-list">
@@ -218,13 +142,12 @@
               </p>
           </div>
         </li>
-
       </ul>
 
     </div>
-  </section><!-- End F.A.Q Section -->
+  </section>
 
-  <!-- ======= Team Section ======= -->
+
   <section id="team" class="team bg-dark">
     <div class="container">
 
@@ -306,13 +229,10 @@
             </div>
           </div>
         </div>
-
       </div>
-
     </div>
-  </section><!-- End Team Section -->
+  </section>
 
-  <!-- ======= Clients Section ======= -->
   <section id="clients" class="clients">
     <div class="container">
 
@@ -329,15 +249,14 @@
       </div>
 
     </div>
-  </section><!-- End Clients Section -->
+  </section>
 
-  <!-- ======= Contact Us Section ======= -->
   <section id="contact" class="contact bg-dark">
     <div class="container">
 
       <div class="section-title" data-aos="fade-up">
         <h1 class="text-white">Contact Us</h1>
-        <p class="text-white">Contact us the get started</p>
+        <p class="text-white">Get in touch with us</p>
       </div>
 
       <div class="row">
@@ -362,9 +281,9 @@
               <p>+265 99 363 48 27</p>
             </div>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCNutqNvHp-1A0XW6Kwxnk6Mc3LejfluLM&q=kalimbuka+zomba+malawi" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
           </div>
-
+          
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
@@ -401,7 +320,8 @@
       </div>
 
     </div>
-  </section><!-- End Contact Us Section -->
+  </section>
 
-</main><!-- End #main -->
 @endsection
+
+{{--  Last edited by Kells Works   --}}

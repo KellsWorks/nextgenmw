@@ -32,25 +32,24 @@
 
 <body class="bg-dark">
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top  bg-dark">
     <div class="container-fluid d-flex">
 
       <div class="logo mr-auto">
         
         {{--  <span class="navbar-brand mb-0 h1 text-white"><span class="custom-text-blue">NEXTGENERATIONS</span>  Malawi</span>  --}}
-         <a href="index.html"><img src="../img/icon.png" alt="" class="img-fluid"></a>
+         <a href="/"><img src="../img/icon.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="/">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#services">Offers</a></li>
+          <li><a href="#offers">Offers</a></li>
           <li class="drop-down"><a href="">Resources</a>
             <ul>
-              <li><a href="#">Downloads</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a href="/downloads">Downloads</a></li>
+              <li><a href="/projects">Projects</a></li>
             </ul>
           </li>
           <li><a href="#contact">About us</a></li>
@@ -94,22 +93,16 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-white">NEXTGENERATIONS</h3>
-            <p class="text-white">
-              Kalimbuka <br>
-              10th Avenue, Zomba<br>
-              Malawi <br><br>
-              <strong>Phone:</strong> +265 99 363 48 27<br>
-              <strong>Email:</strong> info@nextgenmw.com<br>
-            </p>
+            {{--  <h3 class="text-white">NEXTGENERATIONS</h3>  --}}
+            <a href="/"><img src="../img/icon.png" alt="" class="img-fluid"></a>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
             <h4 class="text-white">Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-white">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-white">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-white">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#starter" class="text-white">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about" class="text-white">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services" class="text-white">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-white">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-white">Privacy policy</a></li>
             </ul>
@@ -130,11 +123,9 @@
             <h4 class="text-white">Our Social Networks</h4>
             <p class="text-white">Connect with us via social media</p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              @foreach ($socials as $social)
+              <a href="{{$social->link}}" class="{{$social->title}}"><i class="{{$social->icon}}"></i></a>
+              @endforeach
             </div>
           </div>
 
@@ -144,8 +135,10 @@
 
     <div class="container py-4">
       <div class="copyright">
-        <strong><span class="text-white"> NEXTGENERATIONS Malawi</span></strong> <span class="text-warning">&copy</span> <span class="text-white">All Rights Reserved</span>
+        <strong><span class="text-white"> NEXTGENERATIONS Malawi</span></strong> <span class="text-warning">&copy</span><span class="text-white"> {{date('Y')}}</span> <span class="text-white">All Rights Reserved</span>
       </div>
+    </div>
+    
       
   </footer>
 

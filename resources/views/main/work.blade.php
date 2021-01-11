@@ -2,7 +2,7 @@
 
 
 @section('content')
-<main id="main" class="bg-dark mt-4">
+<main id="" class="bg-dark mt-4">
 
     <!-- ======= Breadcrumbs Section ======= -->
     <section class="breadcrumbs bg-dark">
@@ -18,27 +18,25 @@
         </div>
 
       </div>
-    </section><!-- Breadcrumbs Section -->
+    </section>
+  </main>
 
-    <!-- ======= Portfolio Details Section ======= -->
+    
     <section class="portfolio-details bg-dark">
       <div class="container">
 
         <div class="portfolio-details-container">
 
-          <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
-          </div>
+
+        <img src="../../img/works/{{$offer->image}}" class="img-fluid" alt="">
 
           <div class="portfolio-info">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Category</strong>: Mobile apps (Android) </li>
-              <li><strong>Client</strong>: NEXTGENERATIONS</li>
-              <li><strong>Project date</strong>: 01 July, 2020</li>
-              <li><strong>Google playstore</strong>: <a href="#">Not yet signed</a></li>
+              <li><strong>Category</strong>: {{$offer->category}} </li>
+              <li><strong>Offer</strong>: {{$offer->offer}}</li>
+              <li><strong>Project duration</strong>: {{$offer->duration}} </li>
+              <li><strong>Mode of delivery</strong>: {{$offer->delivery}} </li>
             </ul>
           </div>
 
@@ -47,11 +45,24 @@
         <div class="portfolio-description">
           <h2 class="text-white">Description</h2>
           <p class="text-white">
-             Doctors Appointments version 1.2.9. This app allows users to serach for doctors, pharamaceutical shops and hospitals in their nearest proximity. They can then book an appointment or suggesta favourable place. Deliveries are also included in this app thanks to the mobile money feature integration.
-          </p>
+            {{$offer->description}}
+             </p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
 
-  </main><!-- End #main -->
+      
+    </section>
+
+ 
 @endsection

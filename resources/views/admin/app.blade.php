@@ -299,5 +299,9 @@
 <script src="../../admin/dist/js/pages/dashboard.js"></script>
 
 <script src="../../admin/dist/js/demo.js"></script>
+
+<script src="../../plugins/pace-progress/pace.min.js"></script>
+
+
 </body>
 </html>

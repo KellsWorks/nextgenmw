@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\PageVisitors;
 use App\Models\User;
 use App\Models\HomeContent;
+use App\Models\Services;
+use App\Models\LatestWorks;
+use App\Models\SocialLinks;
+use App\Models\Offers;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,21 +29,44 @@ use App\Models\HomeContent;
 Route::get('/', function(Request $request) {
     
     $homeInfo = HomeBanner::all();
-    $ip =  $request->ip();
 
+    $ip =  $request->ip();
     $visitor = new PageVisitors();
     $visitor->ip = $ip;
 
     $visitor->save();
+
+    $services = Services::all();
+    $socials = SocialLinks::all();
+
+    $mobile_works = LatestWorks::select('SELECT * WHERE tag = mobile');
+    $offers = Offers::all();
     
 
-    return view('main.home', compact($homeInfo, 'homeInfo'), compact('ip'));
+    return view('main.home', compact('mobile_works', 'homeInfo', 'offers'), compact('socials', 'services'));
 });
 
-Route::get('/work', function() {
+Route::get('/offers/{id}', function($id) {
     
+    $socials = SocialLinks::all();
 
-    return view('main.work');
+    $offer = Offers::find($id);
+
+    //dd($offer);
+
+    return view('main.work', compact('socials', 'offer'));
+});
+
+Route::get('/downloads', function() {
+    $socials = SocialLinks::all();
+
+    return view('main.downloads', compact('socials'));
+});
+
+Route::get('/projects', function() {
+    $socials = SocialLinks::all();
+
+    return view('main.projects', compact('socials'));
 });
 
 
@@ -96,7 +123,18 @@ Route::get('/v1/admin/profile', function() {
 });
 
 Route::get('/v1/admin/pages', function() {
+
+   
+
     return view('admin.pages');
+});
+
+Route::get('/v1/admin/services-offered', function() {
+
+    $services = Services::select('select * where tab = tab_1')
+    ;
+
+    return view('admin.services', compact($services, 'services'));
 });
 
 Route::get('/v1/admin/home-page', function() {
