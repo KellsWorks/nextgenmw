@@ -214,7 +214,7 @@
 
         <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
           <div class="member">
-            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+            <img src="https://i2.wp.com/ceph.io/wp-content/uploads/2016/07/headshot-placeholder.png?fit=250%2C250&ssl=1" class="img-fluid" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Rodger Kumwanje</h4>

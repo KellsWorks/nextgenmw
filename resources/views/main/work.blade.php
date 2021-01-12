@@ -44,7 +44,7 @@
 
         <div class="portfolio-description">
           <h2 class="text-white">Description</h2>
-          <p class="text-white">
+          <p class="text-white" style=" white-space: pre-wrap;">
             {{$offer->description}}
              </p>
         </div>
