@@ -205,8 +205,8 @@
               <div class="social">
                 <a href="https://twitter.com/kellskamuzu?s=09"><i class="icofont-twitter"></i></a>
                 <a href="https://www.facebook.com/kelvin_kamuzu"><i class="icofont-facebook"></i></a>
-                <a href=""><i class="icofont-instagram"></i></a>
-                <a href=""><i class="icofont-linkedin"></i></a>
+                <a href="https://www.instagram.com/invites/contact/?i=1776vl4u0785i&utm_content=2lyt2hn"><i class="icofont-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kelvin-chidothi-338a7b157"><i class="icofont-linkedin"></i></a>
               </div>
             </div>
           </div>
