@@ -281,7 +281,7 @@
               <p>+265 99 363 48 27</p>
             </div>
 
-            <iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCNutqNvHp-1A0XW6Kwxnk6Mc3LejfluLM&q=kalimbuka+zomba+malawi" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBRZGFJFgA2iUoF_hciLRyqgUH9mUQP3Qk&q=kalimbuka+road+zomba+malawi" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
           </div>
           
         </div>
