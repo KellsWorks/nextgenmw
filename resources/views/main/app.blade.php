@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="/vendor/bootstrap/icofont/iconfont.min.css">
 
   <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/custom-style.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
 
@@ -155,6 +156,41 @@
   <script src="../assets/vendor/aos/aos.js"></script>
 
   <script src="../assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    
+    <script>
+        $(".step").click( function() {
+        $(this).addClass("active").prevAll().addClass("active");
+        $(this).nextAll().removeClass("active");
+        });
+        
+        $(".step01").click( function() {
+        $("#line-progress").css("width", "3%");
+        $(".tab1").addClass("active").siblings().removeClass("active");
+        });
+        
+        $(".step02").click( function() {
+        $("#line-progress").css("width", "25%");
+        $(".tab2").addClass("active").siblings().removeClass("active");
+        });
+        
+        $(".step03").click( function() {
+        $("#line-progress").css("width", "50%");
+        $(".tab3").addClass("active").siblings().removeClass("active");
+        });
+        
+        $(".step04").click( function() {
+        $("#line-progress").css("width", "75%");
+        $(".tab4").addClass("active").siblings().removeClass("active");
+        });
+        
+        $(".step05").click( function() {
+        $("#line-progress").css("width", "100%");
+        $(".tab5").addClass("active").siblings().removeClass("active");
+        });
+    </script> 
 
 </body>
 

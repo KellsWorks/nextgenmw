@@ -126,24 +126,57 @@
   
 
   
-  <section id="faq" class="faq">
-    <div class="container">
-      <div class="section-title" data-aos="fade-up">
-        <h1 class="text-white">F.A.Q</h1>
-        <p class="text-white">Frequently Asked Questions</p>
-      </div>
-
-      <ul class="faq-list">
-        <li data-aos="fade-up" data-aos-delay="100">
-          <a data-toggle="collapse" class="" href="#faq1">Adminstrative roles</i></a>
-          <div id="faq1" class="collapse show" data-parent=".faq-list">
-            <p class="text-white">
-                Can you set up an adminstrative page for my firm but not like wordpress?
-              </p>
-          </div>
-        </li>
+  <section>
+    <div class="section-title section wb">
+      <h1 class="text-white text-center " data-aos="fade-up">Our projects timeline</h1>
+    </div>
+    <br> 
+    <div class="process-wrapper" data-aos="zoom-in" data-aos-delay="100">
+    <div id="progress-bar-container">
+      <ul>
+        <li class="step step01 active"><div class="step-inner text-white">1 January, 2021</div></li>
+        <li class="step step02"><div class="step-inner text-white">1 January, 2021</div></li>
+        <li class="step step03"><div class="step-inner text-white">2 January, 2021</div></li>
+        <li class="step step04"><div class="step-inner text-white">3 January, 2021</div></li>
+        <li class="step step05"><div class="step-inner text-white">4 January, 2021</div></li>
       </ul>
-
+      
+      <div id="line">
+        <div id="line-progress"></div>
+      </div>
+    </div>
+    
+    <div id="progress-content-section">
+      <div class="section-content tab1 active">
+            <h2 class="text-white">Mobile app MVVM</h2>
+            <p class="date-italic text-white">1st January, 2021</p>
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+      </div>
+      
+      <div class="section-content tab2">
+            <h2 class="text-white">Mobile app API Binding</h2>
+            <p class="date-italic text-white">1st January, 2021</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+      </div>
+      
+      <div class="section-content tab3">
+            <h2 class="text-white">Mobile app profiling</h2>
+            <p class="date-italic text-white">1st January, 2021</p>
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+      </div>
+      
+      <div class="section-content tab4">
+            <h2 class="text-white">Mobile app playstore debug</h2>
+            <p class="date-italic text-white">1st January, 2021</p>
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+      </div>
+      
+      <div class="section-content tab5">
+            <h2 class="text-white">Mobile app last build</h2>
+            <p class="date-italic text-white">1st January, 2021</p>
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, consequat non fermentum ac, tempor eu turpis. Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante consequat placerat ut sed eros. Nullam porttitor mattis mi, id fringilla ex consequat eu. Praesent pulvinar tincidunt leo et condimentum. Maecenas volutpat turpis at felis egestas malesuada. Phasellus sem odio, venenatis at ex a, lacinia suscipit orci.</p>
+      </div>
+      </div>
     </div>
   </section>
 
@@ -160,7 +193,7 @@
 
         <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="member">
-            <img src="../img/staff/abel_andersons.jpg" class="img-fluid" alt="">
+            <img src="../img/staff/abel_andersons.jpg" height="250" width="250" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Abel Andersons</h4>
@@ -178,7 +211,7 @@
 
         <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="member">
-            <img src="../img/staff/jacque.jpg" class="img-fluid" alt="" height="500px" width="700px">
+            <img src="../img/staff/jacque.jpg"  alt="" height="250" width="250">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Jacqueline Jailosi</h4>
@@ -196,7 +229,7 @@
 
         <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="member">
-            <img src="../img/staff/kelvin_chidothi.jpg" class="img-fluid" alt="">
+            <img src="../img/staff/kelvin_chidothi.jpg" height="250" width="250" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Kelvin Chidothi</h4>
@@ -214,7 +247,7 @@
 
         <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
           <div class="member">
-            <img src="https://i2.wp.com/ceph.io/wp-content/uploads/2016/07/headshot-placeholder.png?fit=250%2C250&ssl=1" class="img-fluid" alt="">
+            <img src="https://i2.wp.com/ceph.io/wp-content/uploads/2016/07/headshot-placeholder.png?fit=250%2C250&ssl=1" height="250" width="250" alt="">
             <div class="member-info">
               <div class="member-info-content">
                 <h4>Rodger Kumwanje</h4>
